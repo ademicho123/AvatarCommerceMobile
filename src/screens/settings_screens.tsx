@@ -12,8 +12,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../store/authSlice';
-import { RootState } from '../../App';
+import { logout } from '../store/store';
+import { RootState } from '../App';
 
 const SettingsScreen = () => {
   const dispatch = useDispatch();

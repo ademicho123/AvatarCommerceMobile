@@ -22,64 +22,28 @@ Project Structure
 Copymy-app/
 ├── android/          # Android native code
 ├── ios/              # iOS native code
-├── src/
-│   ├── api/          # API services
-│   │   ├── apiClient.ts             # Base API setup with Axios
-│   │   ├── avatarApi.ts             # Avatar creation & management API
-│   │   ├── chatApi.ts               # Chatbot interaction API
-│   │   └── productApi.ts            # Product recommendations API
-│   │
-│   ├── assets/       # Images, fonts, etc.
-│   │   ├── images/
-│   │   ├── icons/
-│   │   └── fonts/
-│   │
-│   ├── components/   # Reusable UI components
-│   │   ├── AvatarCard.tsx           # Avatar display component
-│   │   ├── ChatBubble.tsx           # Message bubble for chat
-│   │   ├── VideoPlayer.tsx          # Avatar video playback
-│   │   └── ProductItem.tsx          # Product recommendation display
-│   │
-│   ├── navigation/   # App navigation
-│   │   ├── AppNavigator.tsx         # Main app navigation
-│   │   ├── AuthNavigator.tsx        # Authentication flow
-│   │   └── TabNavigator.tsx         # Main tab navigation
-│   │
-│   ├── screens/      # Screen components
-│   │   ├── auth/
-│   │   │   ├── LoginScreen.tsx      # User login
-│   │   │   └── SignupScreen.tsx     # User registration
-│   │   │
-│   │   ├── influencer/
-│   │   │   ├── DashboardScreen.tsx  # Influencer main dashboard
-│   │   │   ├── AvatarCreateScreen.tsx # Create new avatar
-│   │   │   └── StatisticsScreen.tsx # Sales & engagement metrics
-│   │   │
-│   │   ├── customer/
-│   │   │   ├── ChatScreen.tsx       # Chat with avatar interface
-│   │   │   └── ProductsScreen.tsx   # Product recommendations
-│   │   │
-│   │   └── settings/
-│   │       └── SettingsScreen.tsx   # App settings
-│   │
-│   ├── store/        # State management
-│   │   ├── authSlice.ts             # Authentication state
-│   │   ├── avatarSlice.ts           # Avatar management state
-│   │   ├── chatSlice.ts             # Chat history state
-│   │   └── store.ts                 # Redux store configuration
-│   │
-│   ├── utils/        # Utility functions
-│   │   ├── storage.ts               # Local storage utilities
-│   │   ├── validation.ts            # Input validation
-│   │   └── formatting.ts            # Text/data formatting
-│   │
-│   └── App.tsx       # Main app component
-├── .gitignore
-├── app.json          # App configuration
-├── babel.config.js
+src/
+├── api/
+│   └── api.ts                 # All API calls consolidated
+├── components/
+│   └── components.tsx         # All reusable components (ChatBubble, ProductItem, VideoPlayer)
+├── navigation/
+│   └── navigation.tsx         # All navigation logic including AppNavigator
+├── screens/
+│   ├── auth_screens.tsx       # Login and Signup screens
+│   ├── influencer_screens.tsx # Avatar creation, Dashboard, Statistics screens
+│   ├── customer_screens.tsx   # Chat and Products screens
+│   └── settings_screens.tsx   # Settings screen
+├── store/
+│   └── store.ts               # State management (including auth slice)
+├── utils/
+│   └── utils.ts               # Helper functions, constants, and utilities
+├── App.tsx                    # Main app component
+└── .gitignore
+├── package-lock.json
 ├── package.json
 ├── README.md
-└── tsconfig.json     # TypeScript config
+
 Technology Stack
 
 Framework: React Native
